@@ -1,14 +1,18 @@
 function firstWord(s) {
   // your code here
-	//remove extra white spaces
-	s=s.trim();
-	//find first white space index
-	int index=s.indexOf(' ');
-	//if there is no white spaces then either it would be null or one word in this case return s
-	if(index==-1){
-		return s;
-	}
-	return s.substring(0,index);//0 to index-1
+	// Trim leading spaces
+  s = s.trim();
+
+  // Find the index of the first space
+  const index = s.indexOf(' ');
+
+  // If no space found, return the whole string
+  if (index === -1) {
+    return s;
+  }
+
+  // Otherwise, return the substring up to the first space
+  return s.substring(0, index);
 	
 }
 
